@@ -104,7 +104,7 @@ config_after_install() {
 
 install_x-ui() {
     systemctl stop x-ui
-    cd /usr/local/
+    cd /usr/local/2
 
     if [ $# == 0 ]; then
         last_version=$(curl -Ls "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
